@@ -17,17 +17,17 @@ public class Hello {
         double x = 10;
         double y = 2;
 
-        System.out.println("- Bounded type token");
-        test(ExpandedOperation.class, x, y);
-
         System.out.println("- Operation list");
         for(ExpandedOperation eo : ExpandedOperation.values()) {
             System.out.println(eo);
         }
 
+        System.out.println("- Bounded type token");
+        test(BasicOperation.class, x, y);
+        test(ExpandedOperation.class, x, y);
+
 
         List operationList = new ArrayList();
-
         operationList.addAll(Arrays.asList(BasicOperation.values()));
         operationList.addAll(Arrays.asList(ExpandedOperation.values()));
 
